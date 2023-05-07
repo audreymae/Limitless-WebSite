@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Logins.apps.LoginsConfig',
     'Meals.apps.MealsConfig',
     'Workouts.apps.WorkoutsConfig',
+    'Home.apps.HomeConfig',
 
 ]
 
