@@ -37,6 +37,6 @@ def user_logout(request):
     logout(request)
     return redirect('home')  # Redirect to home view after logout
 
-
+## Luis testing:
 def logins(request):
     return HttpResponse("Hello, this will handle all the logins!") 
