@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Meal, MealPlan, Recipe, Nutrition
+from django.http import HttpResponse
+
 
 # Create your views here.
 def meal_list(request):
@@ -9,3 +11,10 @@ def meal_list(request):
 def meal_detail(request, meal_id):
     meal = Meal.objects.get(pk=meal_id)
     return render(request, 'meals/meal_detail.html', {'meal': meal})
+
+
+# Luis testing:
+def meals(request):
+    return HttpResponse("Hello, welcome to the meals page") 
+
+

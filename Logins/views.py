@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from .models import UserProfile
+from django.http import HttpResponse
 
 def register(request):
     if request.method == 'POST':
@@ -29,7 +30,13 @@ def user_login(request):
         else:
             return render(request, 'logins/login.html', {'error': 'Invalid username or password'})
     return render(request, 'logins/login.html')
+from django.shortcuts import render
+from django.http import HttpResponse
 
 def user_logout(request):
     logout(request)
     return redirect('home')  # Redirect to home view after logout
+
+
+def logins(request):
+    return HttpResponse("Hello, this will handle all the logins!") 

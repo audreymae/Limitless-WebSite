@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Article, Comment
+from django.http import HttpResponse
 
 # Create your views here.
 def article_list(request):
@@ -9,3 +10,11 @@ def article_list(request):
 def article_detail(request, article_id):
     article = Article.objects.get(pk=article_id)
     return render(request, 'articles/article_detail.html', {'article': article})
+
+
+def articles(request):
+    return HttpResponse("Hello, welcome to the Articles page") 
+
+
+def articles(request):
+    return HttpResponse("Hello, welcome to the Articles page") 
