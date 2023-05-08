@@ -15,6 +15,3 @@ def article_detail(request, article_id):
 def articles(request):
     return HttpResponse("Hello, welcome to the Articles page") 
 
-
-def articles(request):
-    return HttpResponse("Hello, welcome to the Articles page") 
